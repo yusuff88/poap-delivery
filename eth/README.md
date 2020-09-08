@@ -34,15 +34,15 @@ npx buidler run scripts/deploy.js
  - Ropsten: [0x8054f929e637767a3cf2Fc35B59688d9599D9C86](https://ropsten.etherscan.io/address/0x8054f929e637767a3cf2Fc35B59688d9599D9C86)
 
 ### Proof of Gucci ###
- - Mainnet: [](https://etherscan.io/address/)
+ - Mainnet: [0xCE9DF24021c9CEed82a56517179578bD0271aA6a](https://etherscan.io/address/0xCE9DF24021c9CEed82a56517179578bD0271aA6a)
  - Ropsten: [0x3723CF37fE496D15f79b3cb2F30C021f4a3023e6](https://ropsten.etherscan.io/address/0x3723CF37fE496D15f79b3cb2F30C021f4a3023e6)
 
 ### Proof of Gucci - Design competition ###
- - Mainnet: [](https://etherscan.io/address/)
+ - Mainnet: [0x20C048c146B07D7Ef0A469858F9bb38Ac7d0C8Fe](https://etherscan.io/address/0x20C048c146B07D7Ef0A469858F9bb38Ac7d0C8Fe)
  - Ropsten: [0xF7125B1d7142c566dEAc12f60059a495E0DDa2df](https://ropsten.etherscan.io/address/0xF7125B1d7142c566dEAc12f60059a495E0DDa2df)
 
 ### Hard Fork Muir Glacier  ###
- - Mainnet: [](https://etherscan.io/address/)
+ - Mainnet: [0x4DDc256Ea3b558D483C529D9aF53462ABBFbc86D](https://etherscan.io/address/0x4DDc256Ea3b558D483C529D9aF53462ABBFbc86D)
  - Ropsten: [0x7e6A0181e1676aB08ff571c4Faaf1D73D490CE7A](https://ropsten.etherscan.io/address/0x7e6A0181e1676aB08ff571c4Faaf1D73D490CE7A)
 
 
