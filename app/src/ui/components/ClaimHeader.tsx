@@ -1,6 +1,9 @@
 import React, { FC } from 'react';
 import { Box, Flex, Heading, Link } from '@chakra-ui/core';
 
+// UI
+import Content from 'ui/styled/Content';
+
 // Types
 import { AirdropEventData } from 'lib/types';
 type ClaimHeaderProps = {
@@ -26,8 +29,8 @@ const ClaimHeader: FC<ClaimHeaderProps> = ({ event }) => {
         >
           {event.pageTitle}
         </Heading>
-        <div dangerouslySetInnerHTML={{ __html: event.pageText }} />
-        <Box mb={'10px'} as={'p'}>
+        <Content dangerouslySetInnerHTML={{ __html: event.pageText }} />
+        <Box mt={'10px'} as={'p'}>
           <Link href={event.githubLink} color={'primaryColor'} isExternal>
             View elegible addresses
           </Link>

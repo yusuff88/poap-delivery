@@ -4,6 +4,7 @@ import { Box, PseudoBox, Flex, Image, Button } from '@chakra-ui/core';
 
 // UI
 import Card from 'ui/components/Card';
+import Content from 'ui/styled/Content';
 
 // Type
 type EventCardProps = {
@@ -68,7 +69,7 @@ const EventCard: FC<EventCardProps> = ({
             flexDirection={'column'}
             justifyContent={'space-between'}
           >
-            <div dangerouslySetInnerHTML={{ __html: body }} />
+            <Content dangerouslySetInnerHTML={{ __html: body }} />
           </Flex>
         </Box>
         <Box w={'100%'}>{link}</Box>
