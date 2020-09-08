@@ -3,11 +3,11 @@ import { Box, Flex, Heading, Link } from '@chakra-ui/core';
 
 // Types
 import { AirdropEventData } from 'lib/types';
-type YamHeaderPageProps = {
+type ClaimHeaderProps = {
   event: AirdropEventData;
 };
 
-const YamHeaderPage: FC<YamHeaderPageProps> = ({ event }) => {
+const ClaimHeader: FC<ClaimHeaderProps> = ({ event }) => {
   return (
     <Flex
       p={['50px 45px', '50px 45px', '50px 45px', '50px 100px']}
@@ -24,19 +24,9 @@ const YamHeaderPage: FC<YamHeaderPageProps> = ({ event }) => {
           lineHeight={'80px'}
           textAlign={'center'}
         >
-          🍠 YAM Heroes
+          {event.pageTitle}
         </Heading>
-        <Box mb={'10px'} as={'p'}>
-          <Link href={'https://yam.finance'} color={'primaryColor'} isExternal>
-            YAM
-          </Link>
-          , an experiment in fair farming, governance and elasticity, took Ethereum by storm and
-          lived thrilling first 24 hours.
-        </Box>
-        <Box mb={'10px'} as={'p'}>
-          Crazy game theoretical dynamics created the cohort of $YAM Heroes, that are now awarded
-          this rare POAP to hold with pride.
-        </Box>
+        <div dangerouslySetInnerHTML={{ __html: event.pageText }} />
         <Box mb={'10px'} as={'p'}>
           <Link href={event.githubLink} color={'primaryColor'} isExternal>
             View elegible addresses
@@ -47,4 +37,4 @@ const YamHeaderPage: FC<YamHeaderPageProps> = ({ event }) => {
   );
 };
 
-export default YamHeaderPage;
+export default ClaimHeader;

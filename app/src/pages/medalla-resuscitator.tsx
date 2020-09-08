@@ -9,7 +9,7 @@ import events from 'lib/constants/events';
 // UI
 import MainLayout from 'ui/layouts/MainLayout';
 import Container from 'ui/components/Container';
-import ResuscitatorHeaderPage from 'ui/components/ResuscitatorHeaderPage';
+import ClaimHeader from 'ui/components/ClaimHeader';
 import Claim from 'ui/components/claim';
 
 const Yam = () => {
@@ -20,7 +20,7 @@ const Yam = () => {
     >
       <MainLayout>
         <Container>
-          <ResuscitatorHeaderPage event={events['resuscitator']} />
+          <ClaimHeader event={events['resuscitator']} />
           <Claim event={events['resuscitator']} />
         </Container>
       </MainLayout>

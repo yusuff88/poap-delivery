@@ -26,10 +26,17 @@ export type AddressData = {
 
 export type AirdropEventData = {
   key: string;
+  image: string;
+  cardTitle: string;
+  cardText: string;
+  pageTitle: string;
+  pageText: string;
   contractAddress: string;
   addresses: AddressData | null;
   eventIds: number[];
   githubLink: string;
+  active: boolean;
+  link: string;
 };
 
 export type AirdropEvent = {

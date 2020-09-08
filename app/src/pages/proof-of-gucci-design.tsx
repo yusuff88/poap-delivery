@@ -12,22 +12,22 @@ import Container from 'ui/components/Container';
 import ClaimHeader from 'ui/components/ClaimHeader';
 import Claim from 'ui/components/claim';
 
-const Yam = () => {
+const ProofOfGucciDesign = () => {
   return (
     <PageWrapper
-      title={'POAP ✈️ | 🍠 Yam Heroes'}
+      title={'POAP ✈️ | ✨ Proof of Gucci - Design Competition'}
       description={
-        'YAM, an experiment in fair farming, governance and elasticity, took Ethereum by storm and lived thrilling first 24 hours.'
+        'Right after the Proof of Gucci proposal had passed, a design competition was set up. A recognition to all participants!'
       }
     >
       <MainLayout>
         <Container>
-          <ClaimHeader event={events['yam']} />
-          <Claim event={events['yam']} />
+          <ClaimHeader event={events['gucciCompetition']} />
+          <Claim event={events['gucciCompetition']} />
         </Container>
       </MainLayout>
     </PageWrapper>
   );
 };
 
-export default Yam;
+export default ProofOfGucciDesign;
