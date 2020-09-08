@@ -43,7 +43,7 @@ npx buidler run scripts/deploy.js
 
 ### Hard Fork Muir Glacier  ###
  - Mainnet: [](https://etherscan.io/address/)
- - Ropsten: [0xcce3A2A0351c5d3E944b738d9515C0cF195a0580](https://ropsten.etherscan.io/address/0xcce3A2A0351c5d3E944b738d9515C0cF195a0580)
+ - Ropsten: [0x7e6A0181e1676aB08ff571c4Faaf1D73D490CE7A](https://ropsten.etherscan.io/address/0x7e6A0181e1676aB08ff571c4Faaf1D73D490CE7A)
 
 
 ## Going live ##

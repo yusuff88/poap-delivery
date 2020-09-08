@@ -18,7 +18,7 @@ def main():
                 if not resolved_address or not Web3.isAddress(resolved_address):
                     print('>>> ENS NOT FOUND: ', address)
                 else:
-                    address = resolved_address
+                    address = resolved_address.lower()
             if address and Web3.isAddress(address):
                 addresses_list.append(address)
                 formatted_output[address] = [MUIR_GLACIER_EVENT_ID, ]

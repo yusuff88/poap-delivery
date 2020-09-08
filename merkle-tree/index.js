@@ -4,7 +4,6 @@ const fs = require('fs');
 const ethers = require('ethers');
 
 
-
 class MerkleTree {
   constructor (file = './addresses.json') {
     this.pathToFile = file;
