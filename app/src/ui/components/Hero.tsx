@@ -3,18 +3,18 @@ import styled from '@emotion/styled';
 import { useTheme, ITheme, Box, Icon } from '@chakra-ui/core';
 
 // Assets
-import Berlin from 'assets/images/cities/berlin.png';
-import BuenosAires from 'assets/images/cities/buenosaires.png';
-import SanFrancisco from 'assets/images/cities/francisco.png';
-import Gibraltar from 'assets/images/cities/gibraltar.png';
-import London from 'assets/images/cities/london.png';
-import Moscow from 'assets/images/cities/moscow.png';
-import Paris from 'assets/images/cities/paris.png';
-import Pittsburg from 'assets/images/cities/pittsburg.png';
-import Rio from 'assets/images/cities/rio.png';
-import Shangai from 'assets/images/cities/shangai.png';
-import Sydney from 'assets/images/cities/sydney.png';
-import Toronto from 'assets/images/cities/toronto.png';
+import Berlin from 'assets/images/cities/c1.png';
+import BuenosAires from 'assets/images/cities/c2.png';
+import SanFrancisco from 'assets/images/cities/c3.png';
+import Gibraltar from 'assets/images/cities/c4.png';
+import London from 'assets/images/cities/c5.png';
+import Moscow from 'assets/images/cities/c6.png';
+import Paris from 'assets/images/cities/c7.png';
+import Pittsburg from 'assets/images/cities/c8.png';
+import Rio from 'assets/images/cities/c9.png';
+import Shangai from 'assets/images/cities/c10.png';
+import Sydney from 'assets/images/cities/c11.png';
+import Toronto from 'assets/images/cities/c12.png';
 
 // Styled component
 const Background = styled.img<{ theme: ITheme }>`
@@ -27,27 +27,27 @@ const Background = styled.img<{ theme: ITheme }>`
   @media (min-width: ${({ theme }) => theme.breakpoints['md']}) {
     top: 0;
     opacity: 1;
-    &.berlin,
-    &.pittsburg,
-    &.buenos-aires,
-    &.rio,
-    &.shangai {
+    &.c1,
+    &.c8,
+    &.c2,
+    &.c9,
+    &.c10 {
       top: -120px;
     }
-    &.gibraltar,
-    &.san-fran,
-    &.toronto {
+    &.c4,
+    &.c3,
+    &.c12 {
       top: -20px;
     }
-    &.london,
-    &.sydney {
+    &.c5,
+    &.c11 {
       top: -170px;
     }
   }
   @media (min-width: ${({ theme }) => theme.breakpoints['xxl']}) {
-    &.toronto,
-    &.buenos-aires,
-    &.san-fran {
+    &.c12,
+    &.c2,
+    &.c3 {
       top: -160px;
     }
   }
@@ -71,18 +71,18 @@ const IconHolder = styled.div`
 
 const Hero: FC = () => {
   const backgrounds = [
-    { image: Berlin, className: 'berlin' },
-    { image: BuenosAires, className: 'buenos-aires' },
-    { image: SanFrancisco, className: 'san-fran' },
-    { image: Gibraltar, className: 'gibraltar' },
-    { image: London, className: 'london' },
-    { image: Moscow, className: 'london' },
-    { image: Paris, className: 'london' },
-    { image: Pittsburg, className: 'pittsburg' },
-    { image: Rio, className: 'rio' },
-    { image: Shangai, className: 'shangai' },
-    { image: Sydney, className: 'sydney' },
-    { image: Toronto, className: 'toronto' },
+    { image: Berlin, className: 'c1' },
+    { image: BuenosAires, className: 'c2' },
+    { image: SanFrancisco, className: 'c3' },
+    { image: Gibraltar, className: 'c4' },
+    { image: London, className: 'c5' },
+    { image: Moscow, className: 'c5' },
+    { image: Paris, className: 'c5' },
+    { image: Pittsburg, className: 'c8' },
+    { image: Rio, className: 'c9' },
+    { image: Shangai, className: 'c10' },
+    { image: Sydney, className: 'c11' },
+    { image: Toronto, className: 'c12' },
   ];
   const background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
   const theme = useTheme();
@@ -102,7 +102,7 @@ const Hero: FC = () => {
       </Box>
       <Background
         theme={theme}
-        alt={background.className.toUpperCase()}
+        alt={'POAP Delivery'}
         src={background.image}
         className={background.className}
       />

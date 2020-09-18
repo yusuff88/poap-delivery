@@ -32,7 +32,7 @@ const ClaimHeader: FC<ClaimHeaderProps> = ({ event }) => {
         <Content dangerouslySetInnerHTML={{ __html: event.pageText }} />
         <Box mt={'10px'} as={'p'}>
           <Link href={event.githubLink} color={'primaryColor'} isExternal>
-            View elegible addresses
+            View eligible addresses
           </Link>
         </Box>
       </Box>
