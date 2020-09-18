@@ -4,6 +4,7 @@ import { AirdropEvent } from 'lib/types';
 // Events addresses
 import yamHeroes from 'lib/events/yam';
 import medallaResuscitators from 'lib/events/resuscitators';
+import medalla from 'lib/events/medalla';
 import proofOfGucci from 'lib/events/proof-of-gucci';
 import proofOfGucciDesign from 'lib/events/proof-of-gucci-design-competition';
 import muirGlacier from 'lib/events/muir-glacier';
@@ -17,12 +18,12 @@ const events: AirdropEvent = {
     pageTitle: '🎖 Medalla Validators',
     pageText: `<p>To celebrate the launch of the Eth2.0 multiclient testnet Medalla, and to encourage as much community engagement as possible, we have teamed up with our friends at <a target="_blank" rel="noopener noreferrer" href="https://beaconcha.in/">beaconcha.in</a> and <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/ethstaker/">r/ethstaker</a> to create and distribute badges for validators</p>`,
     contractAddress: process.env.GATSBY_MEDALLA_AIRDROP_CONTRACT || '',
-    addresses: null,
+    addresses: medalla,
     eventIds: process.env.GATSBY_MEDALLA_EVENT_IDS
       ? process.env.GATSBY_MEDALLA_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
       : [],
     githubLink: 'https://github.com/poapxyz/poap-delivery/tree/development/events/medalla',
-    active: false,
+    active: true,
     link: '/medalla',
   },
   resuscitator: {

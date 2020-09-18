@@ -45,6 +45,10 @@ npx buidler run scripts/deploy.js
  - Mainnet: [0x4DDc256Ea3b558D483C529D9aF53462ABBFbc86D](https://etherscan.io/address/0x4DDc256Ea3b558D483C529D9aF53462ABBFbc86D)
  - Ropsten: [0x7e6A0181e1676aB08ff571c4Faaf1D73D490CE7A](https://ropsten.etherscan.io/address/0x7e6A0181e1676aB08ff571c4Faaf1D73D490CE7A)
 
+### Medalla Validators  ###
+ - Mainnet: [0xE5414E0189Bd6A8C01f733eA054F396A793A6061](https://etherscan.io/address/0xE5414E0189Bd6A8C01f733eA054F396A793A6061)
+ - Ropsten: [0x4726AdFD5840c4FFA110aB2354ba1E96359796bF](https://ropsten.etherscan.io/address/0x4726AdFD5840c4FFA110aB2354ba1E96359796bF)
+
 
 ## Going live ##
 Before going live, it's necessary to:

@@ -4,7 +4,6 @@ TEKU_ID = 302
 PRYSM_ID = 303
 LIGHTHOUSE_ID = 304
 NIMBUS_ID = 305
-LODESTAR_ID = 338
 
 def main():
     print('> Starting Medalla formatting')
@@ -23,8 +22,6 @@ def main():
                 formatted_output[address.lower()].append(LIGHTHOUSE_ID)
             if networks['nimbus']:
                 formatted_output[address.lower()].append(NIMBUS_ID)
-            if networks['lodestar']:
-                formatted_output[address.lower()].append(LODESTAR_ID)
 
     with open('output.json', 'w') as outfile:
         json.dump(formatted_output, outfile, indent=4)
