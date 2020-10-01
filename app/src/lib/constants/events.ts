@@ -8,6 +8,7 @@ import medalla from 'lib/events/medalla';
 import proofOfGucci from 'lib/events/proof-of-gucci';
 import proofOfGucciDesign from 'lib/events/proof-of-gucci-design-competition';
 import muirGlacier from 'lib/events/muir-glacier';
+import halfRekt from 'lib/events/half-rekt';
 
 const events: AirdropEvent = {
   resuscitator: {
@@ -25,7 +26,7 @@ const events: AirdropEvent = {
       : [],
     githubLink:
       'https://github.com/poapxyz/poap-delivery/tree/development/events/medalla-resuscitators',
-    active: true,
+    active: false,
     link: '/medalla-resuscitator',
   },
   yam: {
@@ -41,7 +42,7 @@ const events: AirdropEvent = {
       ? process.env.GATSBY_YAM_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
       : [],
     githubLink: 'https://github.com/poapxyz/poap-delivery/tree/development/events/yam-heroes',
-    active: true,
+    active: false,
     link: '/yam',
   },
   muirGlacier: {
@@ -58,7 +59,7 @@ const events: AirdropEvent = {
       ? process.env.GATSBY_MUIR_GLACIER_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
       : [],
     githubLink: 'https://github.com/poapxyz/poap-delivery/tree/development/events/muir-glacier',
-    active: true,
+    active: false,
     link: '/muir-glacier',
   },
   gucci: {
@@ -74,7 +75,7 @@ const events: AirdropEvent = {
       ? process.env.GATSBY_PROOF_OF_GUCCI_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
       : [],
     githubLink: 'https://github.com/poapxyz/poap-delivery/tree/development/events/proof-of-gucci',
-    active: true,
+    active: false,
     link: '/proof-of-gucci',
   },
   gucciCompetition: {
@@ -94,7 +95,7 @@ const events: AirdropEvent = {
       : [],
     githubLink:
       'https://github.com/poapxyz/poap-delivery/tree/development/events/proof-of-gucci-design-competition',
-    active: true,
+    active: false,
     link: '/proof-of-gucci-design',
   },
   medalla: {
@@ -110,8 +111,25 @@ const events: AirdropEvent = {
       ? process.env.GATSBY_MEDALLA_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
       : [],
     githubLink: 'https://github.com/poapxyz/poap-delivery/tree/development/events/medalla',
-    active: true,
+    active: false,
     link: '/medalla',
+  },
+  halfRekt: {
+    key: 'half-rekt',
+    image: 'https://storage.googleapis.com/poapmedia/halfrekt-2020-logo-1601513643094.png',
+    cardTitle: 'Half Rekt',
+    cardText: `<p>You yoloed hard and somehow you only got #HalfRekt. Get this POAP to have an eternal reminder that you only live once</p>`,
+    pageTitle: 'Half Rekt',
+    pageTitleImage: 'https://storage.googleapis.com/poapmedia/halfrekt.png',
+    pageText: `<p>You yoloed hard and somehow you only got #HalfRekt. Get this POAP to have an eternal reminder that you only live once</p><p>Note: only accounts that got refunded DAI are eligible for this token</p>`,
+    contractAddress: process.env.GATSBY_HALFREKT_AIRDROP_CONTRACT || '',
+    addresses: halfRekt,
+    eventIds: process.env.GATSBY_HALFREKT_EVENT_IDS
+      ? process.env.GATSBY_HALFREKT_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      : [],
+    githubLink: 'https://github.com/poapxyz/poap-delivery/tree/development/events/half-rekt',
+    active: true,
+    link: '/half-rekt',
   },
 };
 
