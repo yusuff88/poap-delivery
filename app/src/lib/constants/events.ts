@@ -9,6 +9,7 @@ import proofOfGucci from 'lib/events/proof-of-gucci';
 import proofOfGucciDesign from 'lib/events/proof-of-gucci-design-competition';
 import muirGlacier from 'lib/events/muir-glacier';
 import halfRekt from 'lib/events/half-rekt';
+import coinGecko from 'lib/events/coin-gecko-yield-farming';
 
 const events: AirdropEvent = {
   resuscitator: {
@@ -130,6 +131,24 @@ const events: AirdropEvent = {
     githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/half-rekt',
     active: true,
     link: '/half-rekt',
+  },
+  coinGecko: {
+    key: 'coin-gecko',
+    image:
+      'https://storage.googleapis.com/poapmedia/coingecko-yam-yield-farmer-2020-logo-1602423064868.png',
+    cardTitle: 'Coin Gecko Yield Farming',
+    cardText: `<p>You've worked hard to collect candies (and of course yields across the DeFi-fields!). Here's a limited edition NFT CoinGecko is releasing together with POAP to commemorate you and your involvement in many of the yield farming projects in the space!</p>`,
+    pageTitle: '🚜 Coin Gecko Yield Farming',
+    pageText: `<p>You've worked hard to collect candies (and of course yields across the DeFi-fields!). Here's a limited edition NFT CoinGecko is releasing together with POAP to commemorate you and your involvement in many of the yield farming projects in the space!</p>`,
+    contractAddress: process.env.GATSBY_COIN_GECKO_AIRDROP_CONTRACT || '',
+    addresses: coinGecko,
+    eventIds: process.env.GATSBY_COIN_GECKO_EVENT_IDS
+      ? process.env.GATSBY_COIN_GECKO_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      : [],
+    githubLink:
+      'https://github.com/poap-xyz/poap-delivery/tree/development/events/coin-gecko-yield-farming',
+    active: true,
+    link: '/coin-gecko',
   },
 };
 

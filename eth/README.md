@@ -54,6 +54,10 @@ npx buidler run scripts/deploy.js
  - xDAI: [0xDBEa2EE858158f1c2a0000cdAA0Ab1eD641A4944](https://blockscout.com/poa/xdai/address/0xDBEa2EE858158f1c2a0000cdAA0Ab1eD641A4944/transactions)
  - Sokol: [0x825e8c0947975Dae1F595F0cFFC44a8bc6b952C4](https://blockscout.com/poa/sokol/address/0x825e8c0947975Dae1F595F0cFFC44a8bc6b952C4/transactions)
 
+### COIN GECKO - YIELD FARMING  ###
+ - xDAI: [0x32A3c33C5324838077913AeFF595533c2bBdf561](https://blockscout.com/poa/xdai/address/0x32A3c33C5324838077913AeFF595533c2bBdf561/transactions)
+ - Sokol: [0x32A3c33C5324838077913AeFF595533c2bBdf561](https://blockscout.com/poa/sokol/address/0x32A3c33C5324838077913AeFF595533c2bBdf561/transactions)
+
 
 ## Going live ##
 Before going live, it's necessary to:
