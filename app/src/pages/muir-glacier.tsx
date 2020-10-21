@@ -22,7 +22,7 @@ const MiurGlacier = () => {
     >
       <MainLayout>
         <Container>
-          <ClaimHeader event={events['muirGlacier']} />
+          <ClaimHeader event={events['muirGlacier']} migrated />
           <Claim event={events['muirGlacier']} />
         </Container>
       </MainLayout>

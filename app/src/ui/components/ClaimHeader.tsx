@@ -8,9 +8,10 @@ import Content from 'ui/styled/Content';
 import { AirdropEventData } from 'lib/types';
 type ClaimHeaderProps = {
   event: AirdropEventData;
+  migrated?: boolean;
 };
 
-const ClaimHeader: FC<ClaimHeaderProps> = ({ event }) => {
+const ClaimHeader: FC<ClaimHeaderProps> = ({ event, migrated }) => {
   return (
     <Flex
       p={['50px 45px', '50px 45px', '50px 45px', '50px 100px']}
@@ -39,6 +40,13 @@ const ClaimHeader: FC<ClaimHeaderProps> = ({ event }) => {
           {event.pageTitle}
         </Heading>
         <Content dangerouslySetInnerHTML={{ __html: event.pageText }} />
+        {migrated && (
+          <Box mt={'10px'} as={'p'} lineHeight={'16px'} fontSize={'14px'}>
+            Please note that this Airdrop was updated from Mainnet to xDAI, and the new contract
+            does not include address that already claimed the POAP before. If your address is not on
+            the list, please check if it's already in your wallet.
+          </Box>
+        )}
         <Box mt={'10px'} as={'p'}>
           <Link href={event.githubLink} color={'primaryColor'} isExternal>
             View eligible addresses

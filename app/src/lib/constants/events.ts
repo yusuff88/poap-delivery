@@ -27,7 +27,7 @@ const events: AirdropEvent = {
       : [],
     githubLink:
       'https://github.com/poap-xyz/poap-delivery/tree/development/events/medalla-resuscitators',
-    active: false,
+    active: true,
     link: '/medalla-resuscitator',
   },
   yam: {
@@ -43,7 +43,7 @@ const events: AirdropEvent = {
       ? process.env.GATSBY_YAM_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
       : [],
     githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/yam-heroes',
-    active: false,
+    active: true,
     link: '/yam',
   },
   muirGlacier: {
@@ -60,7 +60,7 @@ const events: AirdropEvent = {
       ? process.env.GATSBY_MUIR_GLACIER_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
       : [],
     githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/muir-glacier',
-    active: false,
+    active: true,
     link: '/muir-glacier',
   },
   gucci: {
@@ -76,7 +76,7 @@ const events: AirdropEvent = {
       ? process.env.GATSBY_PROOF_OF_GUCCI_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
       : [],
     githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/proof-of-gucci',
-    active: false,
+    active: true,
     link: '/proof-of-gucci',
   },
   gucciCompetition: {
@@ -96,7 +96,7 @@ const events: AirdropEvent = {
       : [],
     githubLink:
       'https://github.com/poap-xyz/poap-delivery/tree/development/events/proof-of-gucci-design-competition',
-    active: false,
+    active: true,
     link: '/proof-of-gucci-design',
   },
   medalla: {
@@ -112,7 +112,7 @@ const events: AirdropEvent = {
       ? process.env.GATSBY_MEDALLA_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
       : [],
     githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/medalla',
-    active: false,
+    active: true,
     link: '/medalla',
   },
   halfRekt: {

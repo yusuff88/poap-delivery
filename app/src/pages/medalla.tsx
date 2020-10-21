@@ -20,7 +20,7 @@ const Medalla = () => {
     >
       <MainLayout>
         <Container>
-          <ClaimHeader event={events['medalla']} />
+          <ClaimHeader event={events['medalla']} migrated />
           <Claim event={events['medalla']} />
         </Container>
       </MainLayout>

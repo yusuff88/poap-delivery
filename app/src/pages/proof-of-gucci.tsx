@@ -22,7 +22,7 @@ const ProofOfGucci = () => {
     >
       <MainLayout>
         <Container>
-          <ClaimHeader event={events['gucci']} />
+          <ClaimHeader event={events['gucci']} migrated />
           <Claim event={events['gucci']} />
         </Container>
       </MainLayout>
