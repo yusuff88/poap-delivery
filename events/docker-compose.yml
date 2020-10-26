@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  web:
+    restart: always
+    build: .
+    image: merkleimage
+    volumes:
+      - ./:/usr/src/app
+    command: /bin/bash
+    stdin_open: true
+    tty: true
