@@ -22,7 +22,7 @@ const CoinGecko = () => {
     >
       <MainLayout>
         <Container>
-          <ClaimHeader event={events['coinGecko']} />
+          <ClaimHeader event={events['coinGecko']} migrated />
           <Claim event={events['coinGecko']} />
         </Container>
       </MainLayout>

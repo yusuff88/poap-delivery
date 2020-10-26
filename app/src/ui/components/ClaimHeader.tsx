@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Box, Flex, Heading, Image, Link } from '@chakra-ui/core';
+import { RiShareBoxLine } from 'react-icons/ri';
 
 // UI
 import Content from 'ui/styled/Content';
@@ -42,14 +43,15 @@ const ClaimHeader: FC<ClaimHeaderProps> = ({ event, migrated }) => {
         <Content dangerouslySetInnerHTML={{ __html: event.pageText }} />
         {migrated && (
           <Box mt={'10px'} as={'p'} lineHeight={'16px'} fontSize={'14px'}>
-            Please note that this Airdrop was updated from Mainnet to xDAI, and the new contract
-            does not include address that already claimed the POAP before. If your address is not on
-            the list, please check if it's already in your wallet.
+            Please note that this Airdrop was updated, and the new contract does not include address
+            that already claimed the POAP before. If your address is not on the list, please check
+            if it's already in your wallet.
           </Box>
         )}
-        <Box mt={'10px'} as={'p'}>
+        <Box mt={'10px'} as={'p'} fontSize={'16px'}>
           <Link href={event.githubLink} color={'primaryColor'} isExternal>
             View eligible addresses
+            <RiShareBoxLine />
           </Link>
         </Box>
       </Box>

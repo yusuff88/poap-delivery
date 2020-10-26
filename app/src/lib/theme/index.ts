@@ -8,8 +8,15 @@ export const mainStyles = css`
     --mix-font: 'Roboto', sans-serif;
   }
 
-  a:hover {
-    text-decoration: none !important;
+  a {
+    &:hover {
+      text-decoration: none !important;
+    }
+
+    svg {
+      margin-left: 2px;
+      display: inline;
+    }
   }
 
   ::placeholder {

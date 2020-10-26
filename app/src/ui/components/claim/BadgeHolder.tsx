@@ -7,6 +7,9 @@ import { endpoints } from 'lib/api';
 // Asset
 import whiteStar from 'assets/images/white-star.svg';
 
+// Components
+import BadgeAmount from 'ui/styled/BadgeAmount';
+
 // Types
 import { PoapEvent } from 'lib/types';
 type BadgeHolderProps = {
@@ -71,13 +74,13 @@ const BadgeHolder: FC<BadgeHolderProps> = ({
         justifyContent={'space-around'}
       >
         {poaps.map((poap) => {
-          const toBeClaimed = claims.indexOf(poap.id) > -1;
+          const toBeClaimed = claims.filter((claim) => claim === poap.id).length;
           return (
             <Box
               key={poap.id}
               textAlign={'center'}
               position={'relative'}
-              opacity={toBeClaimed ? 1 : 0.3}
+              opacity={toBeClaimed > 0 ? 1 : 0.3}
             >
               <Image
                 src={poap.image_url}
@@ -86,7 +89,8 @@ const BadgeHolder: FC<BadgeHolderProps> = ({
                 m={'10px auto'}
                 boxShadow={'0 4px 14px 0 rgba(101,52,255,.5)'}
               />
-              {claimed && toBeClaimed && (
+              {!claimed && toBeClaimed > 1 && <BadgeAmount>x{toBeClaimed}</BadgeAmount>}
+              {claimed && toBeClaimed > 0 && (
                 <Image
                   src={whiteStar}
                   rounded={'full'}

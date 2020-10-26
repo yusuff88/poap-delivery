@@ -215,7 +215,9 @@ const Claim: FC<ClaimProps> = ({ event }) => {
   }, [account]); //eslint-disable-line
   useEffect(() => {
     if (events) {
-      let _poapsToClaim = events.filter((ev) => event.eventIds.indexOf(ev.id) > -1);
+      let _poapsToClaim = events
+        .filter((ev) => event.eventIds.indexOf(ev.id) > -1)
+        .sort((a, b) => (a.id < b.id ? 1 : -1));
       setPoapsToClaim(_poapsToClaim);
     }
   }, [events]); //eslint-disable-line
