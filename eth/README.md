@@ -61,10 +61,11 @@ npx buidler run scripts/deploy.js
  - Sokol: [0x825e8c0947975Dae1F595F0cFFC44a8bc6b952C4](https://blockscout.com/poa/sokol/address/0x825e8c0947975Dae1F595F0cFFC44a8bc6b952C4/transactions)
 
 ### COIN GECKO - YIELD FARMING  ###
- - xDAI: [0x32A3c33C5324838077913AeFF595533c2bBdf561](https://blockscout.com/poa/xdai/address/0x32A3c33C5324838077913AeFF595533c2bBdf561/transactions)
+ - xDAI: [0x26eB86c9c59fB43AeA66e265f93b82Cac16e3E89](https://blockscout.com/poa/xdai/address/0x26eB86c9c59fB43AeA66e265f93b82Cac16e3E89/transactions)
  - Sokol: [0x32A3c33C5324838077913AeFF595533c2bBdf561](https://blockscout.com/poa/sokol/address/0x32A3c33C5324838077913AeFF595533c2bBdf561/transactions)
 
 
 ## Going live ##
 Before going live, it's necessary to:
 - [x] Add the deployed address contract as a POAP event minter
+
