@@ -65,7 +65,8 @@ npx buidler run scripts/deploy.js
  - Sokol: [0x32A3c33C5324838077913AeFF595533c2bBdf561](https://blockscout.com/poa/sokol/address/0x32A3c33C5324838077913AeFF595533c2bBdf561/transactions)
  
 ### YFI OGs  ###
- - xDAI: [0x34D2f71E6C7FEB5EdDa79f6C9108226F678dDec6](https://blockscout.com/poa/xdai/address/0x34D2f71E6C7FEB5EdDa79f6C9108226F678dDec6/transactions)
+ - xDAI: [0x94804cd05c6976517096Ff0c82A18D01Cc924267](https://blockscout.com/poa/xdai/address/0x94804cd05c6976517096Ff0c82A18D01Cc924267/transactions)
+ - ~~xDAI: [0x34D2f71E6C7FEB5EdDa79f6C9108226F678dDec6](https://blockscout.com/poa/xdai/address/0x34D2f71E6C7FEB5EdDa79f6C9108226F678dDec6/transactions)~~ DEPRECATED
  - Sokol: [0xFDEdaCB6C9Cf5cF1B65d57f22a0bb217D1059166](https://blockscout.com/poa/sokol/address/0xFDEdaCB6C9Cf5cF1B65d57f22a0bb217D1059166/transactions)
 
 
