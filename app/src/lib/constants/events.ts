@@ -11,6 +11,7 @@ import muirGlacier from 'lib/events/muir-glacier';
 import halfRekt from 'lib/events/half-rekt';
 import coinGecko from 'lib/events/coin-gecko-yield-farming';
 import yfiOG from 'lib/events/yfi-og';
+import yCover from 'lib/events/ycover';
 
 const events: AirdropEvent = {
   resuscitator: {
@@ -166,6 +167,25 @@ const events: AirdropEvent = {
     githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/i-played-4-yfi',
     active: true,
     link: '/yfi-og',
+  },
+  yCover: {
+    key: 'ycover',
+    image:
+      'https://storage.googleapis.com/poapmedia/a-new-face-for-ycover-2020-logo-1604601079479.png',
+    cardTitle: 'A New Face For yCover',
+    cardText: `<p>yCover NFT had no face. That's why we launched a contest to find the the best artpiece to be the face of the NFT.</p><p>What's better than holding a piece of art as insurance? 
+</p>`,
+    pageTitle: '🎨 A New Face For yCover',
+    pageText: `<p>yCover NFT had no face. That's why we launched a contest to find the the best artpiece to be the face of the NFT. What's better than holding a piece of art as insurance? 
+</p><p>To thank all voters, we will award them with this POAP created by Cryptouf.</p>`,
+    contractAddress: process.env.GATSBY_YCOVER_AIRDROP_CONTRACT || '',
+    addresses: yCover,
+    eventIds: process.env.GATSBY_YCOVER_EVENT_IDS
+      ? process.env.GATSBY_YCOVER_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      : [],
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/ycover',
+    active: true,
+    link: '/ycover',
   },
 };
 

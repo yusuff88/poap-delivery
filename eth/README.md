@@ -69,6 +69,12 @@ npx buidler run scripts/deploy.js
  - ~~xDAI: [0x34D2f71E6C7FEB5EdDa79f6C9108226F678dDec6](https://blockscout.com/poa/xdai/address/0x34D2f71E6C7FEB5EdDa79f6C9108226F678dDec6/transactions)~~ DEPRECATED
  - Sokol: [0xFDEdaCB6C9Cf5cF1B65d57f22a0bb217D1059166](https://blockscout.com/poa/sokol/address/0xFDEdaCB6C9Cf5cF1B65d57f22a0bb217D1059166/transactions)
 
+ 
+### yCover  ###
+ - xDAI: [0x8c6CE076E20f1Ca15e8A64Fa5CBBdA6B080Da9c7](https://blockscout.com/poa/xdai/address/0x8c6CE076E20f1Ca15e8A64Fa5CBBdA6B080Da9c7/transactions)
+ - Sokol: [0x953c4B0bcFb777615D1De3E640c78c15fF0B64b6](https://blockscout.com/poa/sokol/address/0x953c4B0bcFb777615D1De3E640c78c15fF0B64b6/transactions)
+
+
 
 ## Going live ##
 Before going live, it's necessary to:
