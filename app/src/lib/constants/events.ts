@@ -12,6 +12,7 @@ import halfRekt from 'lib/events/half-rekt';
 import coinGecko from 'lib/events/coin-gecko-yield-farming';
 import yfiOG from 'lib/events/yfi-og';
 import yCover from 'lib/events/ycover';
+import lumberjackers from 'lib/events/lumberjackers';
 
 const events: AirdropEvent = {
   resuscitator: {
@@ -186,6 +187,23 @@ const events: AirdropEvent = {
     githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/ycover',
     active: true,
     link: '/ycover',
+  },
+  lumberjackers: {
+    key: 'lumberjackers',
+    image:
+      'https://storage.googleapis.com/poapmedia/false-start-lumberjackers-2020-logo-1606514369388.png',
+    cardTitle: 'False Start Lumberjackers',
+    cardText: `<p>This POAP is to commemorate the valiant lumberjacks who deposited assets into the contracts and harvested the first $TREE token.</p>`,
+    pageTitle: '🌳 False Start Lumberjackers',
+    pageText: `<p>WhalerDAO released tree.finance twice on Friday November 20, 2020.</p><p>This POAP is to commemorate the valiant lumberjacks who deposited assets into the contracts and harvested the first $TREE token. Their contribution will never be forgotten because this POAP lives on to remind us of their sacrifice. .</p>`,
+    contractAddress: process.env.GATSBY_LUMBERJACKERS_AIRDROP_CONTRACT || '',
+    addresses: lumberjackers,
+    eventIds: process.env.GATSBY_LUMBERJACKERS_EVENT_IDS
+      ? process.env.GATSBY_LUMBERJACKERS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      : [],
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/lumberjackers',
+    active: true,
+    link: '/lumberjackers',
   },
 };
 
