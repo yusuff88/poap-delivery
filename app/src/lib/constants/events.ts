@@ -205,6 +205,23 @@ const events: AirdropEvent = {
     active: true,
     link: '/lumberjackers',
   },
+  keepStakers: {
+    key: 'keep-stakers',
+    image:
+        'https://storage.googleapis.com/poapmedia/keep-network-mainnet-stakers-2020-logo-1607295999088.png',
+    cardTitle: 'KEEP Network Mainnet Stakers',
+    cardText: `<p>This is a POAP created for the first 112 mainnet ECDSA node runners on the KEEP Network.</p>`,
+    pageTitle: '🏰 KEEP Network Mainnet Stakers',
+    pageText: `<p>This is a POAP created for the first 112 mainnet ECDSA node runners on the KEEP Network.</p><p>These initial 100 participants created a private, decentralized network where users could mint tBTC.</p>`,
+    contractAddress: process.env.GATSBY_KEEP_NETWORK_MAINNET_STAKERS_AIRDROP_CONTRACT || '',
+    addresses: lumberjackers,
+    eventIds: process.env.GATSBY_KEEP_NETWORK_MAINNET_STAKERS_EVENT_IDS
+        ? process.env.GATSBY_KEEP_NETWORK_MAINNET_STAKERS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+        : [],
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/keep-network-mainnet-stakers',
+    active: true,
+    link: '/keep-stakers',
+    },
 };
 
 export default events;
