@@ -86,6 +86,11 @@ npx buidler run scripts/deploy.js
 - Sokol: [0xA3aF4983dddC975Ec621A43eFA8B8B38AB599336](https://blockscout.com/poa/sokol/address/0xA3aF4983dddC975Ec621A43eFA8B8B38AB599336/transactions)
 
 
+### Beacon Chain Genesis Depositor  ###
+- xDAI: [0x10BdB24547CC742580da70eCd1d93af50Eb559D1](https://blockscout.com/poa/xdai/address/0x10BdB24547CC742580da70eCd1d93af50Eb559D1/transactions)
+- Sokol: [0x26eB86c9c59fB43AeA66e265f93b82Cac16e3E89](https://blockscout.com/poa/sokol/address/0x26eB86c9c59fB43AeA66e265f93b82Cac16e3E89/transactions)
+
+
 
 ## Going live ##
 Before going live, it's necessary to:

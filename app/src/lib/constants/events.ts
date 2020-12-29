@@ -13,7 +13,8 @@ import coinGecko from 'lib/events/coin-gecko-yield-farming';
 import yfiOG from 'lib/events/yfi-og';
 import yCover from 'lib/events/ycover';
 import lumberjackers from 'lib/events/lumberjackers';
-import keepStakers  from 'lib/events/keep-stakers';
+import keepStakers from 'lib/events/keep-stakers';
+import eth2Genesis from 'lib/events/eth2-genesis';
 
 const events: AirdropEvent = {
   resuscitator: {
@@ -209,7 +210,7 @@ const events: AirdropEvent = {
   keepStakers: {
     key: 'keep-stakers',
     image:
-        'https://storage.googleapis.com/poapmedia/keep-network-mainnet-stakers-2020-logo-1607295999088.png',
+      'https://storage.googleapis.com/poapmedia/keep-network-mainnet-stakers-2020-logo-1607295999088.png',
     cardTitle: 'KEEP Network Mainnet Stakers',
     cardText: `<p>This is a POAP created for the first 112 mainnet ECDSA node runners on the KEEP Network.</p>`,
     pageTitle: '🏰 KEEP Network Mainnet Stakers',
@@ -217,12 +218,32 @@ const events: AirdropEvent = {
     contractAddress: process.env.GATSBY_KEEP_NETWORK_MAINNET_STAKERS_AIRDROP_CONTRACT || '',
     addresses: keepStakers,
     eventIds: process.env.GATSBY_KEEP_NETWORK_MAINNET_STAKERS_EVENT_IDS
-        ? process.env.GATSBY_KEEP_NETWORK_MAINNET_STAKERS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
-        : [],
-    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/keep-network-mainnet-stakers',
+      ? process.env.GATSBY_KEEP_NETWORK_MAINNET_STAKERS_EVENT_IDS.split(',').map((i) =>
+          parseInt(i, 10),
+        )
+      : [],
+    githubLink:
+      'https://github.com/poap-xyz/poap-delivery/tree/development/events/keep-network-mainnet-stakers',
     active: true,
     link: '/keep-stakers',
-    },
+  },
+  eth2Genesis: {
+    key: 'eth2-genesis',
+    image:
+      'https://storage.googleapis.com/poapmedia/beacon-chain-genesis-depositor-2020-logo-1609033712464.png',
+    cardTitle: 'Beacon Chain Genesis Depositor',
+    cardText: `<p>The Beacon Chain Genesis Depositor POAP is awarded to each unique address that submitted a 32 Ether deposit in the beacon chain genesis contract before November 24, 2020.</p>`,
+    pageTitle: '⧫ Beacon Chain Genesis Depositor',
+    pageText: `<p>The Beacon Chain Genesis Depositor POAP is awarded to each unique address that submitted a 32 Ether deposit in the beacon chain genesis contract before November 24, 2020 to be included in the beacon chain genesis on December 1, 2020.</p>`,
+    contractAddress: process.env.GATSBY_ETH2_GENESIS_AIRDROP_CONTRACT || '',
+    addresses: eth2Genesis,
+    eventIds: process.env.GATSBY_ETH2_GENESIS_EVENT_IDS
+      ? process.env.GATSBY_ETH2_GENESIS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      : [],
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/eth2-genesis',
+    active: true,
+    link: '/eth2-genesis',
+  },
 };
 
 export default events;
