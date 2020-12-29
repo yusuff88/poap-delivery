@@ -87,8 +87,8 @@ npx buidler run scripts/deploy.js
 
 
 ### Beacon Chain Genesis Depositor  ###
-- xDAI: [](https://blockscout.com/poa/xdai/address//transactions)
-- Sokol: [0xf7f6fB0362e54f3AaBf83Dd0cEa50E645634a994](https://blockscout.com/poa/sokol/address/0xf7f6fB0362e54f3AaBf83Dd0cEa50E645634a994/transactions)
+- xDAI: [0x10BdB24547CC742580da70eCd1d93af50Eb559D1](https://blockscout.com/poa/xdai/address/0x10BdB24547CC742580da70eCd1d93af50Eb559D1/transactions)
+- Sokol: [0x26eB86c9c59fB43AeA66e265f93b82Cac16e3E89](https://blockscout.com/poa/sokol/address/0x26eB86c9c59fB43AeA66e265f93b82Cac16e3E89/transactions)
 
 
 
