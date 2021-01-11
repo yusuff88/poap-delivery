@@ -255,8 +255,8 @@ const events: AirdropEvent = {
     pageText: `<p>This limited NFT rewards the 100 first pioneers of Aave V2 protocol. You're the first users of the Seamless finance Era, we're proud to have y'all on our side.</p>`,
     contractAddress: process.env.GATSBY_AAVE_V2_PIONEERS_AIRDROP_CONTRACT || '',
     addresses: aaveV2Pioneers,
-    eventIds: process.env.GATSBY_AAVE_V2_PIONEERS__EVENT_IDS
-        ? process.env.GATSBY_AAVE_V2_PIONEERS__EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+    eventIds: process.env.GATSBY_AAVE_V2_PIONEERS_EVENT_IDS
+        ? process.env.GATSBY_AAVE_V2_PIONEERS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
         : [],
     githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/aave-v2-pioneers',
     active: true,
