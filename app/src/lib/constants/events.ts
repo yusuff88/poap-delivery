@@ -15,6 +15,7 @@ import yCover from 'lib/events/ycover';
 import lumberjackers from 'lib/events/lumberjackers';
 import keepStakers from 'lib/events/keep-stakers';
 import eth2Genesis from 'lib/events/eth2-genesis';
+import aaveV2Pioneers from 'lib/events/aave-v2-pioneers';
 
 const events: AirdropEvent = {
   resuscitator: {
@@ -244,6 +245,23 @@ const events: AirdropEvent = {
     active: true,
     link: '/eth2-genesis',
   },
+  aaveV2Pioneers: {
+    key: 'aave-v2-pioneers',
+    image:
+        'https://storage.googleapis.com/poapmedia/aave-v2-pionners-nft-2020-logo-1606988227748.png',
+    cardTitle: 'AAVE V2 Pioneers',
+    cardText: `<p>This limited NFT rewards the 100 first pioneers of Aave V2 protocol.</p>`,
+    pageTitle: '👻 AAVE V2 Pioneers',
+    pageText: `<p>This limited NFT rewards the 100 first pioneers of Aave V2 protocol. You're the first users of the Seamless finance Era, we're proud to have y'all on our side.</p>`,
+    contractAddress: process.env.GATSBY_AAVE_V2_PIONEERS_AIRDROP_CONTRACT || '',
+    addresses: aaveV2Pioneers,
+    eventIds: process.env.GATSBY_AAVE_V2_PIONEERS__EVENT_IDS
+        ? process.env.GATSBY_AAVE_V2_PIONEERS__EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+        : [],
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/aave-v2-pioneers',
+    active: true,
+    link: '/aave-v2-pioneers',
+},
 };
 
 export default events;
