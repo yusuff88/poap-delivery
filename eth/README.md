@@ -94,6 +94,10 @@ npx buidler run scripts/deploy.js
 - xDAI: [0xEe344B3864BbbfEc4c4548b79a27464a92FC69f2](https://blockscout.com/poa/xdai/address/0xEe344B3864BbbfEc4c4548b79a27464a92FC69f2/transactions)
 - Sokol: [0x94804cd05c6976517096Ff0c82A18D01Cc924267](https://blockscout.com/poa/sokol/address/0x94804cd05c6976517096Ff0c82A18D01Cc924267/transactions)
 
+### Beacon Chain First 1024  ###
+- xDAI: [0x3d45054AD8D8C2450f64769BF768ffaE21784f76](https://blockscout.com/poa/xdai/address/0x3d45054AD8D8C2450f64769BF768ffaE21784f76/transactions)
+- Sokol: [0x8c6CE076E20f1Ca15e8A64Fa5CBBdA6B080Da9c7](https://blockscout.com/poa/sokol/address/0x8c6CE076E20f1Ca15e8A64Fa5CBBdA6B080Da9c7/transactions)
+
 
 ## Going live ##
 Before going live, it's necessary to:

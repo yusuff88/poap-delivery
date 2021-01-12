@@ -1,6 +1,8 @@
 import csv
 import json
 
+from web3 import Web3
+
 AAVE_EVENT_ID = 566
 
 def main():
@@ -12,6 +14,8 @@ def main():
             if each == '\n':
                 continue
             address = each.rstrip()
+            if not Web3.isAddress(address):
+                print('>>> ERROR > Invalid address: ', address)
             formatted_output[address] = [AAVE_EVENT_ID, ]
 
     with open('output.json', 'w') as outfile:
