@@ -15,6 +15,8 @@ import yCover from 'lib/events/ycover';
 import lumberjackers from 'lib/events/lumberjackers';
 import keepStakers from 'lib/events/keep-stakers';
 import eth2Genesis from 'lib/events/eth2-genesis';
+import aaveV2Pioneers from 'lib/events/aave-v2-pioneers';
+import beaconChainFirst1024 from 'lib/events/beacon-chain-first-1024';
 
 const events: AirdropEvent = {
   resuscitator: {
@@ -243,6 +245,40 @@ const events: AirdropEvent = {
     githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/eth2-genesis',
     active: true,
     link: '/eth2-genesis',
+  },
+  aaveV2Pioneers: {
+    key: 'aave-v2-pioneers',
+    image:
+        'https://storage.googleapis.com/poapmedia/aave-v2-pionners-nft-2020-logo-1606988227748.png',
+    cardTitle: 'AAVE V2 Pioneers',
+    cardText: `<p>This limited NFT rewards the 100 first pioneers of Aave V2 protocol.</p>`,
+    pageTitle: '👻 AAVE V2 Pioneers',
+    pageText: `<p>This limited NFT rewards the 100 first pioneers of Aave V2 protocol. You're the first users of the Seamless finance Era, we're proud to have y'all on our side.</p>`,
+    contractAddress: process.env.GATSBY_AAVE_V2_PIONEERS_AIRDROP_CONTRACT || '',
+    addresses: aaveV2Pioneers,
+    eventIds: process.env.GATSBY_AAVE_V2_PIONEERS_EVENT_IDS
+        ? process.env.GATSBY_AAVE_V2_PIONEERS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+        : [],
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/aave-v2-pioneers',
+    active: true,
+    link: '/aave-v2-pioneers',
+  },
+  beaconChainFirst1024: {
+    key: 'beacon-chain-first-1024',
+    image:
+        'https://storage.googleapis.com/poapmedia/beacon-chain-first-1024-depositors-and-proposers-2021-logo-1610143811247.png',
+    cardTitle: 'Beacon Chain First 1024 Depositors and Proposers',
+    cardText: `<p>The Beacon Chain First 1024 POAP is awarded to each unique address that was in the first 1024 beacon chain deposits and the first 1024 block proposals on the Ethereum 2 Beacon Chain that launched December 1, 2020.</p>`,
+    pageTitle: '⧫ Beacon Chain First 1024 Depositors and Proposers',
+    pageText: `<p>The Beacon Chain First 1024 POAP is awarded to each unique address that was in the first 1024 beacon chain deposits and the first 1024 block proposals on the Ethereum 2 Beacon Chain that launched December 1, 2020. This POAP badge was designed by borisblock as part of a design contest held on the POAP discord channel.</p>`,
+    contractAddress: process.env.GATSBY_BEACON_CHAIN_FIRST_1024_AIRDROP_CONTRACT || '',
+    addresses: beaconChainFirst1024,
+    eventIds: process.env.GATSBY_BEACON_CHAIN_FIRST_1024_EVENT_IDS
+        ? process.env.GATSBY_BEACON_CHAIN_FIRST_1024_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+        : [],
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/beacon-chain-first-1024',
+    active: true,
+    link: '/beacon-chain-first-1024',
   },
 };
 

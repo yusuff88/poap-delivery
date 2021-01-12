@@ -12,7 +12,7 @@ import Container from 'ui/components/Container';
 import ClaimHeader from 'ui/components/ClaimHeader';
 import Claim from 'ui/components/claim';
 
-const Yam = () => {
+const KeepStakers = () => {
   return (
     <PageWrapper
       title={'POAP ✈️ | 🏰 KEEP Network Mainnet Stakers'}
@@ -30,4 +30,4 @@ const Yam = () => {
   );
 };
 
-export default Yam;
+export default KeepStakers;

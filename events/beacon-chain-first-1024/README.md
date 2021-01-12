@@ -1,0 +1,12 @@
+# ⧫ Beacon Chain First 1024 Depositors and Proposers
+
+### Data source
+Original file: [original.csv](original.csv)
+
+### Formatting
+To process the file to the format needed for the merkle tree process, run the following command:
+```py
+python3 format-file.py
+```
+
+A new file will be generated, some validations will be run
