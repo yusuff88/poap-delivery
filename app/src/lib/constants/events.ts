@@ -17,6 +17,7 @@ import keepStakers from 'lib/events/keep-stakers';
 import eth2Genesis from 'lib/events/eth2-genesis';
 import aaveV2Pioneers from 'lib/events/aave-v2-pioneers';
 import beaconChainFirst1024 from 'lib/events/beacon-chain-first-1024';
+import beaconChainFirst32769 from 'lib/events/beacon-chain-first-32769';
 
 const events: AirdropEvent = {
   resuscitator: {
@@ -279,6 +280,23 @@ const events: AirdropEvent = {
     githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/beacon-chain-first-1024',
     active: true,
     link: '/beacon-chain-first-1024',
+  },
+  beaconChainFirst32769: {
+    key: 'beacon-chain-first-32769',
+    image:
+      'https://storage.googleapis.com/poapmedia/beacon-chain-first-32769-block-validators-2021-2021-logo-1611528225519.png',
+    cardTitle: 'Beacon Chain First 32,769 Block Validators',
+    cardText: `<p>The Beacon Chain First 32,769 POAP is awarded to each unique address that was in the first 32,769 block proposals on the Ethereum 2 Beacon Chain that launched December 1, 2020.</p>`,
+    pageTitle: '⧫ Beacon Chain First 32,769 Block Validators',
+    pageText: `<p>The Beacon Chain First 32,769 POAP is awarded to each unique address that was in the first 32,769 block proposals on the Ethereum 2 Beacon Chain that launched December 1, 2020. This POAP badge was designed by borisblock as part of a design contest held on the POAP discord channel.</p>`,
+    contractAddress: process.env.GATSBY_BEACON_CHAIN_FIRST_32769_BLOCK_VALIDATORS_AIRDROP_CONTRACT || '',
+    addresses: beaconChainFirst32769,
+    eventIds: process.env.GATSBY_BEACON_CHAIN_FIRST_32769_BLOCK_VALIDATORS_EVENT_IDS
+      ? process.env.GATSBY_BEACON_CHAIN_FIRST_32769_BLOCK_VALIDATORS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      : [],
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events//beacon-chain-first-32769',
+    active: true,
+    link: '/beacon-chain-first-32769',
   },
 };
 
