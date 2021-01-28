@@ -1,75 +1,69 @@
 import React, { FC } from 'react';
 import styled from '@emotion/styled';
-import { useTheme, ITheme } from '@chakra-ui/core';
 
 // Components
 import BuiltWith from 'ui/components/BuiltWith';
 import Community from 'ui/components/Community';
-import Credits from 'ui/components/Credits';
 import Logo from 'ui/components/Logo';
 import Container from 'ui/components/Container';
+import About from 'ui/components/About';
 
-const FooterWrap = styled.div<{ theme: ITheme }>`
+const FooterWrapper = styled.footer`
   box-shadow: inset 0px 1px 0px #eaedf4;
-  padding: 50px 0 24px;
+  display: flex;
+  flex-direction: column;
   background: white;
-  .footer-table-row {
+  z-index: 2;
+  position: relative;
+`;
+const FooterContent = styled.div`
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 480px) {
+    padding: 50px 0 0 !important;
+  }
+  @media (max-width: 768px) {
+    padding: 30px 24px 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    row-gap: 52px;
+    column-gap: 10px;
+  }
+`;
+const LogoContainer = styled.div`
+  grid-area: 1 / 1 / 2 / 2;
+  @media (max-width: 768px) {
+    grid-area: 3 / 1 / 3 / 1;
+    align-items: center;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints['sm']}) {
-      flex-direction: column-reverse;
-    }
-
-    .footer-table-cell {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
-
-      @media (max-width: ${({ theme }) => theme.breakpoints['md']}) {
-        padding: 10px 0;
-      }
-
-      .logo {
-        width: 60px;
-        margin: 0 auto 20px;
-      }
-      .built-on-eth {
-        width: 120px;
-        margin: 0 auto;
-      }
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  img {
+    width: 59px;
+    height: 78px;
+    @media (min-width: 768px) {
+      width: 49px;
+      height: 65px;
     }
   }
 `;
 
-const CreditsWrap = styled.div`
-  width: 100%;
-  text-align: center;
-`;
-
 const Footer: FC = () => {
-  const theme = useTheme();
   return (
-    <FooterWrap theme={theme}>
+    <FooterWrapper>
       <Container>
-        <div className={'footer-table-row'}>
-          <div className={'footer-table-cell'}>
-            <a href={'https://www.poap.xyz'} target={'_blank'} rel="noopener noreferrer">
-              <Logo />
-            </a>
-            <BuiltWith />
-          </div>
-          <div className={'footer-table-cell'}>
-            <Community />
-          </div>
-        </div>
-        <CreditsWrap>
-          <Credits />
-        </CreditsWrap>
+        <FooterContent>
+          <LogoContainer>
+            <Logo />
+          </LogoContainer>
+          <About />
+          <Community />
+        </FooterContent>
       </Container>
-    </FooterWrap>
+      <BuiltWith />
+    </FooterWrapper>
   );
 };
 

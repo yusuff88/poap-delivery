@@ -1,10 +1,28 @@
 import React, { FC } from 'react';
+import styled from '@emotion/styled';
+import { useTheme, ITheme } from '@chakra-ui/core';
 
-// assets
+// Assets
 import BuiltOnEthereum from 'assets/images/built-on-ethereum.png';
 
-const BuiltWith: FC = () => (
-  <img alt="Built on Ethereum" className="built-on-eth" src={BuiltOnEthereum} />
-);
+// Styled Components
+const BuiltContainer = styled.div<{ theme: ITheme }>`
+  width: 100%;
+  text-align: center;
+  background: ${({ theme }) => theme.colors.gray.eth};
+  img {
+    height: 30px;
+    margin: 0 auto;
+  }
+`;
+
+const BuiltWith: FC = () => {
+  const theme = useTheme();
+  return (
+    <BuiltContainer theme={theme}>
+      <img src={BuiltOnEthereum} alt={'Built on Ethereum'} />
+    </BuiltContainer>
+  );
+};
 
 export default BuiltWith;

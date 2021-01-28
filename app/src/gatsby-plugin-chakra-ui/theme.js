@@ -19,7 +19,7 @@ export default {
   colors: {
     ...theme.colors,
     font: '#4d5680',
-    primaryColor: '#6534ff',
+    primaryColor: '#6534FF',
     secondaryColor: '#94a0d4',
     tertiaryColor: '#e98d9b',
     gray: {
@@ -28,6 +28,10 @@ export default {
       light: '#eaedf4',
       veryLight: '#FAFBFD',
       text: '#959DA6',
+
+      // New design
+      eth: '#F7F7F7',
+      font: '#8492CE'
     },
   },
   breakpoints,
