@@ -18,6 +18,7 @@ import eth2Genesis from 'lib/events/eth2-genesis';
 import aaveV2Pioneers from 'lib/events/aave-v2-pioneers';
 import beaconChainFirst1024 from 'lib/events/beacon-chain-first-1024';
 import beaconChainFirst32769 from 'lib/events/beacon-chain-first-32769';
+import inverseFinanceOriginalDao409 from 'lib/events/inverse-finance-original-dao-409';
 
 const events: AirdropEvent = {
   resuscitator: {
@@ -294,9 +295,26 @@ const events: AirdropEvent = {
     eventIds: process.env.GATSBY_BEACON_CHAIN_FIRST_32769_BLOCK_VALIDATORS_EVENT_IDS
       ? process.env.GATSBY_BEACON_CHAIN_FIRST_32769_BLOCK_VALIDATORS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
       : [],
-    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events//beacon-chain-first-32769',
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/beacon-chain-first-32769',
     active: true,
     link: '/beacon-chain-first-32769',
+  },
+  inverseFinanceOriginalDao409: {
+    key: 'inverse-finance-original-dao-409',
+    image:
+      'https://storage.googleapis.com/poapmedia/inverse-finance-original-dao-409-2021-logo-1614855066870.png',
+    cardTitle: 'Inverse Finance Original DAO 409',
+    cardText: `<p>TThis badge certifies that you were among the original group of 409 INVaders that helped establish the Inverse Finance DAO. Sure, you filled out a google form, but you also actively contributed to the greatness of Inverse Finance!</p>`,
+    pageTitle: '💰 Inverse Finance Original DAO 409',
+    pageText: `<p>This badge certifies that you were among the original group of 409 INVaders that helped establish the Inverse Finance DAO. Sure, you filled out a google form, but you also actively contributed to the greatness of Inverse Finance!</p>`,
+    contractAddress: process.env.GATSBY_INVERSE_FINANCE_ORIGINAL_DAO_409_AIRDROP_CONTRACT || '',
+    addresses: inverseFinanceOriginalDao409,
+    eventIds: process.env.GATSBY_INVERSE_FINANCE_ORIGINAL_DAO_409_EVENT_IDS
+      ? process.env.GATSBY_INVERSE_FINANCE_ORIGINAL_DAO_409_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      : [],
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/inverse-finance-original-dao-409',
+    active: true,
+    link: '/inverse-finance-original-dao-409',
   },
 };
 
