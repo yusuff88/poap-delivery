@@ -102,6 +102,10 @@ npx buidler run scripts/deploy.js
 - xDAI: [0x0090D08970abF25181f7740f90A4504094bf79A4](https://blockscout.com/poa/xdai/address/0x0090D08970abF25181f7740f90A4504094bf79A4/transactions)
 - Sokol: [0x484387587C0BCecfb77414F554d5be375A4f829A](https://blockscout.com/poa/sokol/address/0x484387587C0BCecfb77414F554d5be375A4f829A/transactions)
 
+### Inverse Finance Original DAO 409  ###
+- xDAI: [0x28141733B6Fd4F7FeA9D0219e217bA5b48Be4825](https://blockscout.com/poa/xdai/address/0x28141733B6Fd4F7FeA9D0219e217bA5b48Be4825/transactions)
+- Sokol: [0xD12123c833DFef943C5F8A9F2c1Efd802cc05F72](https://blockscout.com/poa/sokol/address/0xD12123c833DFef943C5F8A9F2c1Efd802cc05F72/transactions)
+
 
 ## Going live ##
 Before going live, it's necessary to:
