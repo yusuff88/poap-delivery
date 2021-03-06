@@ -251,7 +251,7 @@ const events: AirdropEvent = {
   aaveV2Pioneers: {
     key: 'aave-v2-pioneers',
     image:
-        'https://storage.googleapis.com/poapmedia/aave-v2-pionners-nft-2020-logo-1606988227748.png',
+      'https://storage.googleapis.com/poapmedia/aave-v2-pionners-nft-2020-logo-1606988227748.png',
     cardTitle: 'AAVE V2 Pioneers',
     cardText: `<p>This limited NFT rewards the 100 first pioneers of Aave V2 protocol.</p>`,
     pageTitle: '👻 AAVE V2 Pioneers',
@@ -259,16 +259,17 @@ const events: AirdropEvent = {
     contractAddress: process.env.GATSBY_AAVE_V2_PIONEERS_AIRDROP_CONTRACT || '',
     addresses: aaveV2Pioneers,
     eventIds: process.env.GATSBY_AAVE_V2_PIONEERS_EVENT_IDS
-        ? process.env.GATSBY_AAVE_V2_PIONEERS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
-        : [],
-    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/aave-v2-pioneers',
+      ? process.env.GATSBY_AAVE_V2_PIONEERS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      : [],
+    githubLink:
+      'https://github.com/poap-xyz/poap-delivery/tree/development/events/aave-v2-pioneers',
     active: true,
     link: '/aave-v2-pioneers',
   },
   beaconChainFirst1024: {
     key: 'beacon-chain-first-1024',
     image:
-        'https://storage.googleapis.com/poapmedia/beacon-chain-first-1024-depositors-and-proposers-2021-logo-1610143811247.png',
+      'https://storage.googleapis.com/poapmedia/beacon-chain-first-1024-depositors-and-proposers-2021-logo-1610143811247.png',
     cardTitle: 'Beacon Chain First 1024 Depositors and Proposers',
     cardText: `<p>The Beacon Chain First 1024 POAP is awarded to each unique address that was in the first 1024 beacon chain deposits and the first 1024 block proposals on the Ethereum 2 Beacon Chain that launched December 1, 2020.</p>`,
     pageTitle: '⧫ Beacon Chain First 1024 Depositors and Proposers',
@@ -276,9 +277,10 @@ const events: AirdropEvent = {
     contractAddress: process.env.GATSBY_BEACON_CHAIN_FIRST_1024_AIRDROP_CONTRACT || '',
     addresses: beaconChainFirst1024,
     eventIds: process.env.GATSBY_BEACON_CHAIN_FIRST_1024_EVENT_IDS
-        ? process.env.GATSBY_BEACON_CHAIN_FIRST_1024_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
-        : [],
-    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/beacon-chain-first-1024',
+      ? process.env.GATSBY_BEACON_CHAIN_FIRST_1024_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      : [],
+    githubLink:
+      'https://github.com/poap-xyz/poap-delivery/tree/development/events/beacon-chain-first-1024',
     active: true,
     link: '/beacon-chain-first-1024',
   },
@@ -290,12 +292,16 @@ const events: AirdropEvent = {
     cardText: `<p>The Beacon Chain First 32,769 POAP is awarded to each unique address that was in the first 32,769 block proposals on the Ethereum 2 Beacon Chain that launched December 1, 2020.</p>`,
     pageTitle: '⧫ Beacon Chain First 32,769 Block Validators',
     pageText: `<p>The Beacon Chain First 32,769 POAP is awarded to each unique address that was in the first 32,769 block proposals on the Ethereum 2 Beacon Chain that launched December 1, 2020. This POAP badge was designed by borisblock as part of a design contest held on the POAP discord channel.</p>`,
-    contractAddress: process.env.GATSBY_BEACON_CHAIN_FIRST_32769_BLOCK_VALIDATORS_AIRDROP_CONTRACT || '',
+    contractAddress:
+      process.env.GATSBY_BEACON_CHAIN_FIRST_32769_BLOCK_VALIDATORS_AIRDROP_CONTRACT || '',
     addresses: beaconChainFirst32769,
     eventIds: process.env.GATSBY_BEACON_CHAIN_FIRST_32769_BLOCK_VALIDATORS_EVENT_IDS
-      ? process.env.GATSBY_BEACON_CHAIN_FIRST_32769_BLOCK_VALIDATORS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      ? process.env.GATSBY_BEACON_CHAIN_FIRST_32769_BLOCK_VALIDATORS_EVENT_IDS.split(',').map((i) =>
+          parseInt(i, 10),
+        )
       : [],
-    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/beacon-chain-first-32769',
+    githubLink:
+      'https://github.com/poap-xyz/poap-delivery/tree/development/events/beacon-chain-first-32769',
     active: true,
     link: '/beacon-chain-first-32769',
   },
@@ -304,15 +310,18 @@ const events: AirdropEvent = {
     image:
       'https://storage.googleapis.com/poapmedia/inverse-finance-original-dao-409-2021-logo-1614855066870.png',
     cardTitle: 'Inverse Finance Original DAO 409',
-    cardText: `<p>TThis badge certifies that you were among the original group of 409 INVaders that helped establish the Inverse Finance DAO. Sure, you filled out a google form, but you also actively contributed to the greatness of Inverse Finance!</p>`,
+    cardText: `<p>This badge certifies that you were among the original group of 409 INVaders that helped establish the Inverse Finance DAO. Sure, you filled out a google form, but you also actively contributed to the greatness of Inverse Finance!</p>`,
     pageTitle: '💰 Inverse Finance Original DAO 409',
     pageText: `<p>This badge certifies that you were among the original group of 409 INVaders that helped establish the Inverse Finance DAO. Sure, you filled out a google form, but you also actively contributed to the greatness of Inverse Finance!</p>`,
     contractAddress: process.env.GATSBY_INVERSE_FINANCE_ORIGINAL_DAO_409_AIRDROP_CONTRACT || '',
     addresses: inverseFinanceOriginalDao409,
     eventIds: process.env.GATSBY_INVERSE_FINANCE_ORIGINAL_DAO_409_EVENT_IDS
-      ? process.env.GATSBY_INVERSE_FINANCE_ORIGINAL_DAO_409_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      ? process.env.GATSBY_INVERSE_FINANCE_ORIGINAL_DAO_409_EVENT_IDS.split(',').map((i) =>
+          parseInt(i, 10),
+        )
       : [],
-    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/inverse-finance-original-dao-409',
+    githubLink:
+      'https://github.com/poap-xyz/poap-delivery/tree/development/events/inverse-finance-original-dao-409',
     active: true,
     link: '/inverse-finance-original-dao-409',
   },
