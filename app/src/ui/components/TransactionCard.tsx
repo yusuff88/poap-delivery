@@ -30,6 +30,22 @@ const TransactionCard: FC<TransactionCardProps> = ({ transaction }) => {
     </Box>
   );
 
+  if (!transaction.hash) {
+    status = (
+      <Box
+        bg={'gray.light'}
+        color={'secondaryColor'}
+        w={'150px'}
+        m={'0 auto'}
+        borderRadius={'5px'}
+        p={'0 5px'}
+      >
+        <Spinner speed={'1s'} size={'xs'} m={'-2px 10px 0 0'} />
+        Processing
+      </Box>
+    );
+  }
+
   if (transaction.status === 'passed') {
     status = (
       <Box
@@ -76,10 +92,12 @@ const TransactionCard: FC<TransactionCardProps> = ({ transaction }) => {
               TX HASH
             </Box>
             <Box textAlign={'center'} color={'primaryColor'}>
+              { transaction.hash &&
               <Link href={blockscoutLinks.transaction(transaction.hash)} isExternal>
                 {shortTx(transaction.hash)}{' '}
                 <Icon name={'external-link'} size={'14px'} mt={'-3px'} />
-              </Link>
+              </Link> }
+              { !transaction.hash && '-'}
             </Box>
           </Box>
           <Box flex={1} borderLeft={'1px solid'} borderColor={'gray.light'}>
