@@ -19,6 +19,7 @@ import aaveV2Pioneers from 'lib/events/aave-v2-pioneers';
 import beaconChainFirst1024 from 'lib/events/beacon-chain-first-1024';
 import beaconChainFirst32769 from 'lib/events/beacon-chain-first-32769';
 import inverseFinanceOriginalDao409 from 'lib/events/inverse-finance-original-dao-409';
+import ethtrader1MMembers from 'lib/events/ethtrader-1m-members';
 
 const events: AirdropEvent = {
   resuscitator: {
@@ -324,6 +325,23 @@ const events: AirdropEvent = {
       'https://github.com/poap-xyz/poap-delivery/tree/development/events/inverse-finance-original-dao-409',
     active: true,
     link: '/inverse-finance-original-dao-409',
+  },
+  ethtrader1MMembers: {
+    key: 'ethtrader-1m-members',
+    image:
+      'https://storage.googleapis.com/poapmedia/rethtrader-1-million-members-2021-logo-1615929871036.png',
+    cardTitle: 'r/ethtrader 1 Million Members',
+    cardText: `<p>A community-created badge celebrating the 1 million member milestone for r/ethtrader, awarded to users that had previously registered their address for the subreddit’s community token $DONUT</p>`,
+    pageTitle: '📰 r/ethtrader 1 Million Members',
+    pageText: `<p>A community-created badge celebrating the 1 million member milestone for r/ethtrader, awarded to users that had previously registered their address for the subreddit’s community token $DONUT</p>`,
+    contractAddress: process.env.GATSBY_ETHTRADER_1M_MEMBERS_AIRDROP_CONTRACT || '',
+    addresses: ethtrader1MMembers,
+    eventIds: process.env.GATSBY_ETHTRADER_1M_MEMBERS_EVENT_IDS
+      ? process.env.GATSBY_ETHTRADER_1M_MEMBERS_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      : [],
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/ethtrader-1m-members',
+    active: true,
+    link: '/ethtrader-1m-members',
   },
 };
 
