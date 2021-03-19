@@ -163,6 +163,7 @@ const Claim: FC<ClaimProps> = ({ event }) => {
   // Effects
   useEffect(() => {
     if (!providerL1) {
+      console.log('Initiating Provider L1');
       try {
         let _provider = ethers.getDefaultProvider(process.env.GATSBY_ETHEREUM_NETWORK, {
           etherscan: process.env.GATSBY_ETHERSCAN_KEY,
@@ -174,6 +175,7 @@ const Claim: FC<ClaimProps> = ({ event }) => {
       }
     }
     if (!providerL2) {
+      console.log('Initiating Provider L2');
       try {
         let _provider = ethers.getDefaultProvider(process.env.GATBY_L2_PROVIDER);
         setProviderL2(_provider);
