@@ -106,6 +106,9 @@ npx buidler run scripts/deploy.js
 - xDAI: [0x28141733B6Fd4F7FeA9D0219e217bA5b48Be4825](https://blockscout.com/poa/xdai/address/0x28141733B6Fd4F7FeA9D0219e217bA5b48Be4825/transactions)
 - Sokol: [0xD12123c833DFef943C5F8A9F2c1Efd802cc05F72](https://blockscout.com/poa/sokol/address/0xD12123c833DFef943C5F8A9F2c1Efd802cc05F72/transactions)
 
+### Ethtrader 1 Million Members  ###
+- xDAI: [0x2a7404aC173501741876d05604CB8833B874C05a](https://blockscout.com/poa/xdai/address/0x2a7404aC173501741876d05604CB8833B874C05a/transactions)
+- Sokol: [0xECD184B0FF06593CE9cE6b2D654E9Fe432E1Bf73](https://blockscout.com/poa/sokol/address/0xECD184B0FF06593CE9cE6b2D654E9Fe432E1Bf73/transactions)
 
 ## Going live ##
 Before going live, it's necessary to:
