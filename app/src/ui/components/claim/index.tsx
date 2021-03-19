@@ -90,9 +90,6 @@ const Claim: FC<ClaimProps> = ({ event }) => {
     }
 
     let _contract = airdropContract;
-    console.log('Contract!');
-    console.log(_contract);
-    console.log(_contract?.claimed);
 
     if (!_contract) {
       setError('Error initiating contract');
@@ -100,7 +97,6 @@ const Claim: FC<ClaimProps> = ({ event }) => {
       return;
     }
 
-    console.log('Address: ', _address);
     let _claimed = false;
     try {
       _claimed = await _contract?.claimed(_address);
@@ -170,10 +166,6 @@ const Claim: FC<ClaimProps> = ({ event }) => {
   // Effects
   useEffect(() => {
     if (!providerL1) {
-      console.log('Initiating Provider L1');
-      console.log(process.env.GATSBY_ETHEREUM_NETWORK);
-      console.log(process.env.GATSBY_ETHERSCAN_KEY);
-      console.log(process.env.GATSBY_INFURA_KEY);
       try {
         let _provider = ethers.getDefaultProvider(process.env.GATSBY_ETHEREUM_NETWORK, {
           infura: process.env.GATSBY_INFURA_KEY,
@@ -184,14 +176,10 @@ const Claim: FC<ClaimProps> = ({ event }) => {
       }
     }
     if (!providerL2) {
-      console.log('Initiating Provider L2');
       try {
         let _providerL2 = ethers.getDefaultProvider(process.env.GATSBY_L2_PROVIDER);
         setProviderL2(_providerL2);
         let _contract = new ethers.Contract(event.contractAddress, abi, _providerL2);
-        console.log('Contract address: ', event.contractAddress);
-        console.log('ABI: ', abi);
-        console.log('Provider: ', _providerL2);
         setAirdropContract(_contract);
       } catch (e) {
         console.log('Error while initiating provider');
