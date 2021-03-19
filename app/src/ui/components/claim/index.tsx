@@ -100,7 +100,13 @@ const Claim: FC<ClaimProps> = ({ event }) => {
     }
 
     console.log('Address: ', _address);
-    const _claimed = (await _contract?.claimed(_address)) || false;
+    let _claimed = false;
+    try {
+      _claimed = await _contract?.claimed(_address);
+    } catch (e) {
+      console.log('Error on checking claimed');
+      console.log(e);
+    }
 
     setValidatingAddress(false);
     setAddressValidated(true);
