@@ -97,7 +97,13 @@ const Claim: FC<ClaimProps> = ({ event }) => {
       return;
     }
 
-    const _claimed = (await _contract?.claimed(_address)) || false;
+    let _claimed = false;
+    try {
+      _claimed = await _contract?.claimed(_address);
+    } catch (e) {
+      console.log('Error on checking claimed');
+      console.log(e);
+    }
 
     setValidatingAddress(false);
     setAddressValidated(true);
@@ -162,7 +168,6 @@ const Claim: FC<ClaimProps> = ({ event }) => {
     if (!providerL1) {
       try {
         let _provider = ethers.getDefaultProvider(process.env.GATSBY_ETHEREUM_NETWORK, {
-          etherscan: process.env.GATSBY_ETHERSCAN_KEY,
           infura: process.env.GATSBY_INFURA_KEY,
         });
         setProviderL1(_provider);
@@ -172,9 +177,9 @@ const Claim: FC<ClaimProps> = ({ event }) => {
     }
     if (!providerL2) {
       try {
-        let _provider = ethers.getDefaultProvider(process.env.GATBY_L2_PROVIDER);
-        setProviderL2(_provider);
-        let _contract = new ethers.Contract(event.contractAddress, abi, _provider);
+        let _providerL2 = ethers.getDefaultProvider(process.env.GATSBY_L2_PROVIDER);
+        setProviderL2(_providerL2);
+        let _contract = new ethers.Contract(event.contractAddress, abi, _providerL2);
         setAirdropContract(_contract);
       } catch (e) {
         console.log('Error while initiating provider');
