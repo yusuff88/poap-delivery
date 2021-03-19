@@ -90,6 +90,8 @@ const Claim: FC<ClaimProps> = ({ event }) => {
     }
 
     let _contract = airdropContract;
+    console.log('Contract!');
+    console.log(_contract);
 
     if (!_contract) {
       setError('Error initiating contract');
@@ -97,6 +99,7 @@ const Claim: FC<ClaimProps> = ({ event }) => {
       return;
     }
 
+    console.log('Address: ', _address);
     const _claimed = (await _contract?.claimed(_address)) || false;
 
     setValidatingAddress(false);
@@ -175,6 +178,9 @@ const Claim: FC<ClaimProps> = ({ event }) => {
         let _provider = ethers.getDefaultProvider(process.env.GATBY_L2_PROVIDER);
         setProviderL2(_provider);
         let _contract = new ethers.Contract(event.contractAddress, abi, _provider);
+        console.log('Contract address: ', event.contractAddress);
+        console.log('ABI: ', abi);
+        console.log('Provider: ', _provider);
         setAirdropContract(_contract);
       } catch (e) {
         console.log('Error while initiating provider');
