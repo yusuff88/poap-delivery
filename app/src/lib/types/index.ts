@@ -47,7 +47,8 @@ export type AirdropEvent = {
 export type Transaction = {
   key: string;
   address: string;
-  hash: string;
+  hash?: string;
+  queue_uid: string;
   status: 'passed' | 'pending' | 'failed';
 };
 
@@ -59,11 +60,24 @@ export type ClaimRequest = {
   proofs: string[];
 };
 
-export type ClaimResponse = {
-  tx_hash: string;
-  beneficiary: string;
-  signer: string;
-  created_date: string;
-  tx_status: string;
-  layer: string;
+export type QueueResponse = {
+  queue_uid: string;
 };
+
+type QueueResult = {
+  tx_hash: string;
+};
+
+export type Queue = {
+  uid: string;
+  operation: string;
+  status: string;
+  result: QueueResult | null;
+};
+
+export enum QueueStatus {
+  finish = 'FINISH',
+  finish_with_error = 'FINISH_WITH_ERROR',
+  in_process = 'IN_PROCESS',
+  pending = 'PENDING',
+}

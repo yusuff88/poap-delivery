@@ -22,7 +22,8 @@ import abi from 'lib/abi/poapAirdrop.json';
 import MerkleTree from 'lib/helpers/merkleTree';
 
 // Types
-import { AirdropEventData, Transaction, PoapEvent, ClaimRequest } from 'lib/types';
+import {AirdropEventData, Transaction, PoapEvent, ClaimRequest, Queue, QueueStatus} from 'lib/types';
+import {api, endpoints} from "lib/api";
 type ClaimProps = {
   event: AirdropEventData;
 };
@@ -143,17 +144,10 @@ const Claim: FC<ClaimProps> = ({ event }) => {
         let tx: Transaction = {
           key: event.key,
           address,
-          hash: _claimResponse.tx_hash,
+          queue_uid: _claimResponse.queue_uid,
           status: 'pending',
         };
         saveTransaction(tx);
-        toast({
-          title: 'Delivery in process!',
-          description: 'The POAP token is on its way to your wallet',
-          status: 'success',
-          duration: 5000,
-          isClosable: true,
-        });
       } else {
         throw new Error('No response received');
       }
@@ -192,14 +186,39 @@ const Claim: FC<ClaimProps> = ({ event }) => {
         transactions
           .filter((tx) => tx.status === 'pending')
           .forEach(async (tx) => {
-            let receipt = await providerL2.getTransactionReceipt(tx.hash);
-            if (receipt) {
-              let newTx: Transaction = { ...tx, status: 'passed' };
-              if (!receipt.status) {
-                newTx = { ...tx, status: 'failed' };
-                setClaiming(false);
+            if(tx.hash) {
+              let receipt = await providerL2.getTransactionReceipt(tx.hash);
+              if (receipt) {
+                let newTx: Transaction = {...tx, status: 'passed'};
+                if (!receipt.status) {
+                  newTx = {...tx, status: 'failed'};
+                  setClaiming(false);
+                }
+                saveTransaction(newTx);
               }
-              saveTransaction(newTx);
+            } else {
+              const queue: Queue = await api().url(endpoints.poap.queue(tx.queue_uid)).get().json();
+              if (queue.status == QueueStatus.finish && queue.result && queue.result.tx_hash) {
+                let newTx: Transaction = {...tx, hash: queue.result.tx_hash};
+                saveTransaction(newTx);
+                toast({
+                  title: 'Delivery in process!',
+                  description: 'The POAP token is on its way to your wallet',
+                  status: 'success',
+                  duration: 5000,
+                  isClosable: true,
+                });
+              } else if (queue.status == QueueStatus.finish_with_error) {
+                let newTx: Transaction = {...tx, hash: queue.result.tx_hash, status: 'failed'};
+                saveTransaction(newTx);
+                toast({
+                  title: 'Couldn\'t deliver your POAP!',
+                  description: 'There was an error processing your POAP token. Please try again',
+                  status: 'error',
+                  duration: 5000,
+                  isClosable: true,
+                });
+              }
             }
           });
       }

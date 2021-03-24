@@ -5,7 +5,7 @@ import { useMutation } from 'react-query';
 import { api, endpoints } from 'lib/api';
 
 // Types
-import { ClaimRequest, ClaimResponse } from 'lib/types';
+import { ClaimRequest, QueueResponse } from 'lib/types';
 
 export const useClaim = () => {
   const claimPOAP = (claim: ClaimRequest): Promise<Raffle> =>
@@ -13,8 +13,8 @@ export const useClaim = () => {
 
   // react query
   return useMutation(claimPOAP, {
-    onSuccess: (response: ClaimResponse) => {
-      console.log('Claimed! ', response.tx_hash);
+    onSuccess: (response: QueueResponse) => {
+      console.log('Claimed! ', response.queue_uid);
     },
   });
 };
