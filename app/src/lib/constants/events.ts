@@ -20,6 +20,7 @@ import beaconChainFirst1024 from 'lib/events/beacon-chain-first-1024';
 import beaconChainFirst32769 from 'lib/events/beacon-chain-first-32769';
 import inverseFinanceOriginalDao409 from 'lib/events/inverse-finance-original-dao-409';
 import ethtrader1MMembers from 'lib/events/ethtrader-1m-members';
+import moonCatKeyVoter from 'lib/events/moon-cat-key-voter';
 
 const events: AirdropEvent = {
   resuscitator: {
@@ -342,6 +343,23 @@ const events: AirdropEvent = {
     githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/ethtrader-1m-members',
     active: true,
     link: '/ethtrader-1m-members',
+  },
+  moonCatKeyVoter: {
+    key: 'moon-cat-key-voter',
+    image:
+      'https://storage.googleapis.com/poapmedia/mooncatkeyvoter-2021-logo-1616851051521.png',
+    cardTitle: 'MoonCatKeyVoter',
+    cardText: `<p>This badge certifies that you have interacted with the MoonCatRescue or Wrapped MoonCatRescue smart contract and participated in the first MoonCatRescue community vote.</p>`,
+    pageTitle: '🐱 MoonCatKeyVoter',
+    pageText: `<p>This badge certifies that you have interacted with the MoonCatRescue or Wrapped MoonCatRescue smart contract and participated in the first MoonCatRescue community vote. The private key to the contract will be destroyed, but the remaining Genesis MoonCats will continue to live happily on the moon.</p>`,
+    contractAddress: process.env.GATSBY_MOON_CAT_KEY_VOTER_AIRDROP_CONTRACT || '',
+    addresses: moonCatKeyVoter,
+    eventIds: process.env.GATSBY_MOON_CAT_KEY_VOTER_EVENT_IDS
+      ? process.env.GATSBY_MOON_CAT_KEY_VOTER_EVENT_IDS.split(',').map((i) => parseInt(i, 10))
+      : [],
+    githubLink: 'https://github.com/poap-xyz/poap-delivery/tree/development/events/moon-cat-key-voter',
+    active: true,
+    link: '/moon-cat-key-voter',
   },
 };
 
